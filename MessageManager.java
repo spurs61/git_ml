@@ -3,7 +3,12 @@ public class MessageManager {
 	private String message;
     private String DEFAULT="Message manager reporting for action";
 	
-	public String print(){
+	
+	public MessageManager(String initialMessage){
+		setMessage(initialMessage);
+	}
+	
+	public String generateMessage(){
 		return (null != getMessage() ) ? getMessage() : DEFAULT ;
 	}
    
@@ -15,4 +20,11 @@ public class MessageManager {
 	public String getMessage(){
 		return message;
 	}
+	
+	
+	public void print(){
+		System.out.println( generateMessage() );				
+
+	}
+
 }
